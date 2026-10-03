@@ -1,0 +1,62 @@
+meta:
+  name: "WaluMetin"
+  version: "3.0"
+  prefix: "&8[&6WaluMetin&8]&7 "
+
+commands:
+  metin:
+    tr: "/metin olustur"
+    en: "/metin create"
+    fr: "/metin creer"
+  reload:
+    tr: "/metin reload"
+    en: "/metin reload"
+    fr: "/metin recharger"
+  delete:
+    tr: "/metin sil"
+    en: "/metin delete"
+    fr: "/metin supprimer"
+  info:
+    tr: "/metin bilgi"
+    en: "/metin info"
+    fr: "/metin info"
+
+gui:
+  title:
+    tr: "WaluMetin Yönetimi"
+    en: "WaluMetin Manager"
+    fr: "Gestion WaluMetin"
+  deleteTitle:
+    tr: "Taş Silme Paneli"
+    en: "Stone Delete Menu"
+    fr: "Menu de suppression"
+
+messages:
+  prefix:
+    tr: "&8[&6WaluMetin&8]&7 "
+    en: "&8[&6WaluMetin&8]&7 "
+    fr: "&8[&6WaluMetin&8]&7 "
+  no_permission:
+    tr: "&cBu komutu kullanma yetkin yok."
+    en: "&cYou do not have permission to use this command."
+    fr: "&cVous n'avez pas la permission d'utiliser cette commande."
+  reloaded:
+    tr: "&aConfig ve dil dosyaları yenilendi."
+    en: "&aConfiguration and language files reloaded."
+    fr: "&aLa configuration et les fichiers de langue ont été rechargés."
+  stone_created:
+    tr: "&aMetin taşı oluşturuldu: %stone%"
+    en: "&aStone created: %stone%"
+    fr: "&aPierre créée : %stone%"
+  stone_deleted:
+    tr: "&aMetin taşı silindi: %stone%"
+    en: "&aStone deleted: %stone%"
+    fr: "&aPierre supprimée : %stone%"
+  invalid_stone:
+    tr: "&cGeçersiz taş tipi: %stone%"
+    en: "&cInvalid stone type: %stone%"
+    fr: "&cType de pierre invalide : %stone%"
+  info:
+    tr: "&eWaluMetin 3.0 | Dil: %lang% | Taş Sayısı: %count%"
+    en: "&eWaluMetin 3.0 | Language: %lang% | Stone count: %count%"
+    fr: "&eWaluMetin 3.0 | Langue : %lang% | Nombre de pierres : %count%"

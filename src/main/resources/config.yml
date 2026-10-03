@@ -1,24 +1,115 @@
-# WaluMetin Configuration
-# Dinamik Metin Taşı Sistemi
+Language: "tr"
+BroadcastOnRespawn: true
+HologramFormat: "%name% &7[%hp%/%max% HP]"
+
+Hologram:
+  Enabled: true
+  Provider: AUTO
+
+Leaderboard:
+  Hologram: true
+
+Mobs:
+  TargetRadius: 24.0
+
+Effects:
+  Percents: [75, 50, 25]
+  Knockback:
+    Radius: 8.0
+    Power: 1.6
+    Lift: 0.9
+  Fire:
+    Radius: 5.0
+    Seconds: 4
+  Fatigue:
+    Radius: 8.0
+    Seconds: 8
+    Level: 1
+    Slowness: true
 
 MetinTaslari:
-  # Örnek 1: Elmas Metin Taşı
-  ornek_tas:
-    Name: "&6&lElmas Metin Taşı"
-    Type: "DIAMOND_ORE"
+  elmas_tas:
+    Name: "&#FFD700&lElmas Metin Taşı"
+    Type: "DIAMOND_BLOCK"
     HP: 100
-    Duration: 30 # Saniye cinsinden yenileme süresi
+    Duration: 20
+    Enabled: true
+    Broadcast: true
+    Effects:
+      Knockback: true
+      Fire: true
+      Fatigue: false
+    BroadcastMessages:
+      Break:
+        - "%prefix%&e%player% &7oyuncusu &#FFD700&lElmas Metin Taşı&7'nı parçaladı!"
+      Respawn:
+        - "%prefix%&#FFD700&lElmas Metin Taşı &7yeniden doğdu! &8(%x%, %y%, %z%)"
+    HitRewards:
+      - item: "DIAMOND"
+        amount: 1
+        chance: 10.0
+      - command: "eco give %player% 50"
+        chance: 5.0
+    BreakRewards:
+      - item: "NETHERITE_INGOT"
+        amount: 1
+        chance: 5.0
+      - command: "eco give %player% 1000"
+        chance: 20.0
+      - command: "give %player% diamond_sword 1"
+        chance: 10.0
+    MobSpawnsEnabled: false
+    MobSpawns:
+      75:
+        type: "ZOMBIE"
+        amount: 2
+      50:
+        type: "SKELETON"
+        amount: 3
+      25:
+        type: "WITHER_SKELETON"
+        amount: 1
+    MobKeepVanillaDrops: false
+    MobDrops:
+      - item: "GOLDEN_APPLE"
+        amount: 1
+        chance: 50.0
+      - command: "eco give %player% 100"
+        chance: 30.0
 
-  # Örnek 2: Altın Metin Taşı
-  altin_tas:
-    Name: "&e&lAltın Metin Taşı"
-    Type: "GOLD_ORE"
-    HP: 80
-    Duration: 25
-
-  # Örnek 3: Demir Metin Taşı
   demir_tas:
     Name: "&7&lDemir Metin Taşı"
-    Type: "IRON_ORE"
+    Type: "IRON_BLOCK"
     HP: 60
-    Duration: 20
+    Duration: 15
+    Enabled: true
+    Broadcast: false
+    Effects:
+      Knockback: true
+      Fire: false
+      Fatigue: true
+    HitRewards:
+      - item: "IRON_INGOT"
+        amount: 2
+        chance: 25.0
+    BreakRewards:
+      - item: "IRON_BLOCK"
+        amount: 1
+        chance: 50.0
+      - command: "eco give %player% 250"
+        chance: 40.0
+    MobSpawnsEnabled: true
+    MobSpawns:
+      80:
+        type: "HUSK"
+        amount: 2
+      40:
+        - type: "BLAZE"
+          amount: 1
+        - type: "SKELETON"
+          amount: 2
+    MobKeepVanillaDrops: false
+    MobDrops:
+      - item: "IRON_INGOT"
+        amount: 3
+        chance: 60.0

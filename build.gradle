@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group = 'com.walustik'
-version = '1.0.0'
+group = 'dev.walu'
+version = '3.0.0'
 
 java {
     toolchain {
@@ -14,10 +14,16 @@ java {
 repositories {
     mavenCentral()
     maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+    maven { url = 'https://jitpack.io' }
+    maven { url = 'https://repo.codemc.io/repository/maven-public/' }
 }
 
 dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+    compileOnly 'eu.decentsoftware:decentholograms:2.8.12'
+    compileOnly 'me.filoghost.holographicdisplays:holographicdisplays-api:3.0.0'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -25,7 +31,8 @@ tasks.withType(JavaCompile).configureEach {
     options.release = 21
 }
 
-jar {
-    archiveFileName = 'WaluMetin-' + version + '.jar'
-    destinationDirectory = file('build/libs')
+processResources {
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
 }

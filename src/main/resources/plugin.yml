@@ -1,14 +1,21 @@
 name: WaluMetin
-version: 1.0.0
-main: com.walustik.walumetin.WaluMetinPlugin
+version: '${version}'
+main: dev.walu.metin.WaluMetin
 api-version: '1.20'
-author: Walustik
-description: Dinamik metin taşı sistemi (Stage 1 / Beta)
+author: Walu
+description: Metin Taşı eklentisi
+softdepend: [PlaceholderAPI, DecentHolograms, HolographicDisplays, CMI]
 commands:
   metintas:
-    description: WaluMetin admin komutları
-    usage: /metintas olustur <tasAdi> [x y z]
-    permission: walumetin.admin
+    description: WaluMetin ana komut
+    usage: /<command> [reload|admin|gui|olustur|sil|info]
+    aliases: [metin, walumetin]
 permissions:
   walumetin.admin:
+    description: Reload, admin menu, stone creation and deletion
+    default: op
+    children:
+      walumetin.gui: true
+  walumetin.gui:
+    description: Stone control panel access
     default: op
