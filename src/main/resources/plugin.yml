@@ -1,0 +1,14 @@
+name: WaluMetin
+version: 1.0.0
+main: com.walustik.walumetin.WaluMetinPlugin
+api-version: '1.20'
+author: Walustik
+description: Dinamik metin taşı sistemi (Stage 1 / Beta)
+commands:
+  metintas:
+    description: WaluMetin admin komutları
+    usage: /metintas olustur <tasAdi> [x y z]
+    permission: walumetin.admin
+permissions:
+  walumetin.admin:
+    default: op

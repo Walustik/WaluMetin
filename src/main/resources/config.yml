@@ -1,0 +1,24 @@
+# WaluMetin Configuration
+# Dinamik Metin Taşı Sistemi
+
+MetinTaslari:
+  # Örnek 1: Elmas Metin Taşı
+  ornek_tas:
+    Name: "&6&lElmas Metin Taşı"
+    Type: "DIAMOND_ORE"
+    HP: 100
+    Duration: 30 # Saniye cinsinden yenileme süresi
+
+  # Örnek 2: Altın Metin Taşı
+  altin_tas:
+    Name: "&e&lAltın Metin Taşı"
+    Type: "GOLD_ORE"
+    HP: 80
+    Duration: 25
+
+  # Örnek 3: Demir Metin Taşı
+  demir_tas:
+    Name: "&7&lDemir Metin Taşı"
+    Type: "IRON_ORE"
+    HP: 60
+    Duration: 20

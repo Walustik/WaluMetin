@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+build/
+*.gradle.bak
+gradle-app.setting
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Java
+*.class
+*.jar
+*.war
+*.rar
+*.zip
+
+# Build output
+out/
+*.log
